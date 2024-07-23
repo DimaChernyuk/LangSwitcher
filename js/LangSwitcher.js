@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const languageSwitcher = document.querySelector('.languageSwitcher');
     const switchLabel = document.querySelector('.switchLabel');
+    const switchWrapper = document.querySelector('.switch');
 
     function updateLanguage() {
         const allContent = document.querySelectorAll('.lang-content');
@@ -12,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             switchLabel.textContent = 'RU';
+            switchWrapper.classList.remove('language-switcher-ru');
+            switchWrapper.classList.add('language-switcher-ua');
         } else {
             allContent.forEach(content => {
                 content.classList.remove('active');
@@ -20,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             switchLabel.textContent = 'UA';
+            switchWrapper.classList.remove('language-switcher-ua');
+            switchWrapper.classList.add('language-switcher-ru');
         }
     }
 
     languageSwitcher.addEventListener('change', updateLanguage);
-    updateLanguage(); // Initialize the correct language on page load
+    updateLanguage(); 
 });
