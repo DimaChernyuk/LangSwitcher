@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     content.classList.add('active');
                 }
             });
-            switchLabel.textContent = 'RU';
+            switchLabel.textContent = 'UA';
             switchWrapper.classList.remove('language-switcher-ru');
             switchWrapper.classList.add('language-switcher-ua');
         } else {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     content.classList.add('active');
                 }
             });
-            switchLabel.textContent = 'UA';
+            switchLabel.textContent = 'RU';
             switchWrapper.classList.remove('language-switcher-ua');
             switchWrapper.classList.add('language-switcher-ru');
         }
